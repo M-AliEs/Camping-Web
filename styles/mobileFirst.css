@@ -1,4 +1,8 @@
-.container{
+@import "Reset-CSS.css";
+@import "fonts.css";
+@import "app.css";
+
+.container {
     max-width: 100%;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
@@ -7,28 +11,89 @@
 }
 
 @media (min-width: 576px) {
-    .container{
+    .container {
         width: 54rem;
     }
 }
+
 @media (min-width: 768px) {
-    .container{
+    .container {
         width: 72rem;
     }
+
+
 }
+
 @media (min-width: 992px) {
-    .container{
+    .container {
         width: 96rem;
     }
+
+    .header_menu-btn {
+        display: none;
+    }
+
+    .singUp {
+        display: block
+
+    }
+
+    .singIn {
+        display: block
+    }
+
+    .header_menu {
+        position: static;
+        background-color: unset;
+        flex-direction: row;
+        width: 67rem;
+        gap: 1rem;
+        padding: 0;
+        height: auto;
+        margin-left: 1rem;
+    }
+
+    .header_menu-item {
+        border: none;
+        height: auto;
+        margin: 0;
+        font-size: 1.5rem;
+        transition: none;
+        position: relative;
+        z-index: 3;
+        color: var(--text-color-menu);
+
+    }
+
+    .header_menu-item:hover {
+        font-size: 1.5rem;
+
+    }
+
+    .header_menu-item:hover::after {
+        content: "";
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: rotate(45deg);
+        width: 4rem;
+        height: 0.3rem;
+        border-radius: 1rem;
+        z-index: -1;
+        background-color: var(--orange);
+    }
 }
+
 @media (min-width: 1200px) {
-    .container{
+    .container {
         width: 114rem;
     }
 }
 
 @media (min-width: 1400px) {
-    .container{
+    .container {
         width: 130rem;
     }
 }
